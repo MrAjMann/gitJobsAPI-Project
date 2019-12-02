@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Aussie Job Search</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <h1>Aussie Job Search</h1>
+        <h4>Dev Jobs Online</h4>
+    </div>
+    <form action="#">
+        <!-- Job Title -->
+        <label for="jobKey"> Search Job Keywords</label>
+        <input type="text" name="Keywords" id="jobKey">
+        <br>
+        <!-- Check what Country -->
+        <label for="country"> Country </label>
+        <select name="Country" id="country">
+            <option value="Australia">Australia</option>
+            <option value="USA">USA</option>
+        </select>
+        <br>
+        <!-- Check What State based on Country Selection -->
+        <label for="state"> State </label>
+        <select name="State" id="Aus" > 
+            <option value="qld">Queensland</option>
+            <option value="vic">Victoria</option>
+            <option value="nsw">New South wales</option>
+            <option value="nt">Northern Teritory</option>
+            <option value="act">Australian Capital Teritory</option>
+            <option value="wa">Western Australia</option>
+            <option value="tas">Tasmania</option>
+        </select>
+        <!-- Check Town Based on State and Country Selection -->
+        <br>
+        <label for="qldTowns"> Town </label>
+        <select name="Town" id="qldTowns">
+            <option value="bris">Brisbane</option>
+            <option value="syd">Sydney</option>
+        </select>
+        <br>
+        <label for="postCode"> Postcode </label>
+        <input type="number" max="9999" name="postcode" id="postCode" required>
+           <br>
+        <label for="positionType"> Position Type </label>
+        <select name="PositionType" id="positionType">
+            <option value="Fulltime">Fulltime</option>
+            <option value="PartTime">PartTime</option>
+            <option value="Casual">Casual</option>
+            <option value="Contract">Contract</option>
+        </select>
+    </form>
+    <button onclick="goToJobSearch()" >Search</button>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>

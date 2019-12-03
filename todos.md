@@ -1,0 +1,1 @@
+retrieve jobs.[0-10] and allocate each index to a select option then search based on user inputs

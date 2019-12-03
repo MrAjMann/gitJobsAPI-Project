@@ -2,8 +2,7 @@
 function getJobs() {
     window.location.href = "/jobSearch.html";
 }
-
-
+/*--------------------------------------------------*/ 
 function goToJobSearch() {
     var xhttp =  new XMLHttpRequest()
     console.log('open')
@@ -13,10 +12,12 @@ function goToJobSearch() {
     console.log('Why aint you working')
 xhttp.onload = function() {
     var data = JSON.parse(this.response)
-    // data.forEach(job =>  {
-    //     console.log(job.id)
-    // })
-    console.log(data)
+    const fullTimePositions = data.filter(job =>  {
+    //    (document.getElementById('type').value == (job.type) 
+      return (job.type) === document.getElementById('type').value
+    })
+    console.log(fullTimePositions)
+    
 }
  xhttp.send()
     console.log('request Sent')

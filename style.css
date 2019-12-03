@@ -1,13 +1,24 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: lightgray;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
 }
 
-.header{
-    text-align: center;
+.header {
+  text-align: center;
 }
 
 .main {
-    text-align: center;
+  display: flex;
+  height: 1vh;
+  /* text-align: center; */
+}
+
+.main,
+.card {
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  color: red;
+  background-color: aqua;
 }

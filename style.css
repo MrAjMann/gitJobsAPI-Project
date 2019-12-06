@@ -1,24 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+:root {
+  --background-primary: #565456;
+  --background-secondary: #b5bec6;
+  --card-primary: #f6f6f6;
+  --background-highlights: #9b0000;
+}
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: lightgray;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-primary);
 }
 
-.header {
+header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 2.5em;
+  color: #ff7f00;
+}
+
+h4 {
+  font-size: 1.6em;
+  color: #ff7f00;
+}
+
+form {
+  display: grid;
+  
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 1fr;
+  height: 30px;
+}
+
+.form-outer-container {
+  grid-template-areas:2, 2;
+  background-color: lightsalmon;
+}
+
+label {
+  text-align: center;
+  padding: 1em;
+}
+input {
+  height: 30px;
+  padding: 0.2em;
   text-align: center;
 }
-
-.main {
-  display: flex;
-  height: 1vh;
-  /* text-align: center; */
+select {
+  height: 30px;
+}
+button {
+  margin-left: 1em;
+  width: 100px;
+  height: 30px;
 }
 
-.main,
-.card {
-  flex-direction: column;
-  text-align: center;
-  width: 80%;
-  color: red;
-  background-color: aqua;
+main {
+  margin: 1em;
+  height: 80vh;
+  background-color: var(--background-secondary);
+}
+/* Adjust grid-container to same as Template */
+
+.cards-outer-container {
+  grid-template-rows: auto 3fr auto;
+  background-color: gray;
+  grid-area: 1;
+  margin: 5rem;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border: 0.2em solid;
+}
+
+.card-inner-container-A {
+  background-color: blue;
+  height: 20rem;
+}
+.card-inner-container-B {
+  height: 20rem;
+  background-color: green;
+}
+.card-inner-container-C {
+  height: 20rem;
+  background-color: darkorange;
+}
+.card-inner-container-D {
+  height: 20rem;
+  background-color: pink;
 }

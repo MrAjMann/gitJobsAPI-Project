@@ -8,38 +8,70 @@
     <title>Aussie Job Search</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="header">
-        <h1>Aussie Job Search</h1>
-        <h4>Dev Jobs Online</h4>
-      </div>
-      <form action="#">
-        <!-- Job Title -->
-        <label for="jobKey"> Search Job Keywords</label>
-        <input type="text" name="Keywords" id="jobKey" />
-        <!-- Check Town Based on State and Country Selection -->
-        <br />
-        <label for="jobLocation"> Location </label>
-        <input type="text" value="Location" name="Location" id="jobLocation" />
-        <br />
+    <header>
+      <section class="header-container">
+        <h1>Git Dev Jobs</h1>
+        <h4>Search Github for Jobs</h4>
+      </section>
+    </header>
 
-        <label for="positionType"> Position Type </label>
-        <select name="PositionType" id="type">
-          <option value="" id="fullTime">Search All</option>
-          <option value="Full Time" id="fullTime">Full Time</option>
-          <option value="Part Time">Part Time</option>
-          <option value="Contract">Contract</option>
-        </select>
-      </form>
-      <button onclick="goToJobSearch()">Search</button>
-
-      <div class="card">
-        <p id="jobTitle">Hello</p>
-        <div class="innerCard">
-          <p id="Description"></p>
+    <form action="#">
+    <section class="form-outer-container">
+        <div class="form-inner-container">
+            <!-- Job Title -->
+            <label for="jobKey"> Search Job Keywords</label>
+            <input type="text" name="Keywords" id="jobKey" />
+            <!-- Check Town Based on State and Country Selection -->
+            <br />
+            <label for="jobLocation"> Location </label>
+            <input type="text" value=" " name="Location" id="jobLocation" />
+            <br />
+            <label for="positionType"> Position Type </label>
+            <select name="PositionType" id="type">
+                <option value="" id="fullTime">Search All</option>
+                <option value="Full Time" id="fullTime">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Contract">Contract</option>
+            </select>
+            <button onclick="goToJobSearch()">Search</button>
+        </form>
         </div>
-      </div>
-    </div>
+    </section>
+    <main>
+      <section class="cards-outer-container">
+        <div class="card-inner-container-A">
+          <p id="jobTitle"></p>
+          <div class="innerCard">
+            <p id="Description"></p>
+          </div>
+        </div>
+      </section>
+      <section class="cards-outer-container">
+        <div class="card-inner-container-B">
+          <p id="jobTitle"></p>
+          <div class="innerCard">
+            <p id="Description"></p>
+          </div>
+        </div>
+      </section>
+      <section class="cards-outer-container">
+        <div class="card-inner-container-C">
+          <p id="jobTitle"></p>
+          <div class="innerCard">
+            <p id="Description"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-outer-container">
+        <div class="card-inner-container-D">
+          <p id="jobTitle"></p>
+          <div class="innerCard">
+            <p id="Description"></p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="app.js"></script>
   </body>

@@ -1,5 +1,5 @@
 # Project Name / Title
- > Jobs For Aussies!
+ > Git Jobs
 
 
 ## 2 - 3 Sentence Project Description (Elevator Pitch)
@@ -18,17 +18,12 @@
     // Country, State, Town/City, Postcode.{X}
 
     // Position type {Fulltime, Part Time, Contract/temp, Other}
-    
-> Settings 
-    // Dropdown Distance Radius (Kms/Miles)
-    //
-> Google Maps Intergration
-    
+       
 
 ## What 3rd Party API(s) will you integrate with?
 
 * https://jobs.github.com/api
-** https://cloud.google.com/maps-platform
+
 
 ## Tech Stack
 
@@ -44,4 +39,8 @@
 * What project management tool will you use?
 * How often will you commit your code?
 * How will you test your web site?
-* How will you design the layout of your website? Will you use a wireframing tool? Will you draw it on paper?
+* 
+How will you design the layout of your website? Will you use a wireframing tool? Will you draw it on paper?
+
+    ** https://wireframe.cc/FU9CTM  **
+

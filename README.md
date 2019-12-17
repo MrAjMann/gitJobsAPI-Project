@@ -43,4 +43,5 @@
 How will you design the layout of your website? Will you use a wireframing tool? Will you draw it on paper?
 
     ** https://wireframe.cc/FU9CTM  **
+    ![Image description](prototypeImages/Basic layout with functionality.png)
 

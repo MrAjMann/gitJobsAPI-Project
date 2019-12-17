@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 :root {
-  --background-primary: #565456;
-  --background-secondary: #b5bec6;
-  --card-primary: #f6f6f6;
-  --background-highlights: #9b0000;
+  --background-primary: #dfdfdf;
+  --background-secondary: rgba(0, 0, 0, 0.5);
+  --card-primary: #6b6b6b69;
 }
 * {
   box-sizing: border-box;
@@ -16,9 +15,8 @@ body {
 }
 
 header {
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  text-align: center;
   margin: 1em;
   padding: 1em;
 }
@@ -34,70 +32,91 @@ h4 {
   color: #ff7f00;
 }
 
-form {
-  display: grid;
-  
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: 1fr;
-  height: 30px;
-}
-
-.form-outer-container {
-  grid-template-areas:2, 2;
-  background-color: lightsalmon;
-}
-
-label {
+form{
   text-align: center;
+}
+
+.search-field {
+  height: 4em;
   padding: 1em;
-}
-input {
-  height: 30px;
-  padding: 0.2em;
+  margin: 0.5em;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  place-content: center;
   text-align: center;
-}
-select {
-  height: 30px;
-}
-button {
-  margin-left: 1em;
-  width: 100px;
-  height: 30px;
+  align-items: center;
 }
 
-main {
+.job-Description {
+  width: 300px;
+}
+
+.job-Location {
+  width: 200px;
+}
+
+.job-Type {
+  width: 200px;
+}
+
+.search-btn {
+  height: 3em;
+  width: 150px;
+  background: #ff7f00;
+  border: none;
+  border-radius: 25px;
+  color: #000;
+}
+
+.search-btn:hover {
+  background: #ff9100;
+  cursor: pointer;
+}
+.form-box {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 2em;
+}
+
+/* Main Content */
+main .bigScreen {
+  max-width: 1920px;
+  height: 100vh;
   margin: 1em;
-  height: 80vh;
-  background-color: var(--background-secondary);
 }
 /* Adjust grid-container to same as Template */
-
-.cards-outer-container {
-  grid-template-rows: auto 3fr auto;
-  background-color: gray;
-  grid-area: 1;
-  margin: 5rem;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  border: 0.2em solid;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-self: center;
+  column-gap: 2em;
+  row-gap: 2em;
+  width: auto;
+  margin: 2em;
+  padding: 1em;
+  border: none;
 }
 
-.card-inner-container-A {
-  background-color: blue;
-  height: 20rem;
+.job-Card {
+  text-align: center;
+  background: rgba(71, 71, 71, 0.3);
+  width: 100%;
+  height: 30vh;
+  border-radius: 15px;
+ 
 }
-.card-inner-container-B {
-  height: 20rem;
-  background-color: green;
+.job-card:hover {
+  background: rgba(71, 71, 71, 0.8);
+ 
 }
-.card-inner-container-C {
-  height: 20rem;
-  background-color: darkorange;
-}
-.card-inner-container-D {
-  height: 20rem;
-  background-color: pink;
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .grid-container.mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

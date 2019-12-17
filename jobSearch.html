@@ -16,60 +16,42 @@
     </header>
 
     <form action="#">
-    <section class="form-outer-container">
-        <div class="form-inner-container">
-            <!-- Job Title -->
-            <label for="jobKey"> Search Job Keywords</label>
-            <input type="text" name="Keywords" id="jobKey" />
-            <!-- Check Town Based on State and Country Selection -->
-            <br />
-            <label for="jobLocation"> Location </label>
-            <input type="text" value=" " name="Location" id="jobLocation" />
-            <br />
-            <label for="positionType"> Position Type </label>
-            <select name="PositionType" id="type">
-                <option value="" id="fullTime">Search All</option>
-                <option value="Full Time" id="fullTime">Full Time</option>
-                <option value="Part Time">Part Time</option>
-                <option value="Contract">Contract</option>
-            </select>
-            <button onclick="goToJobSearch()">Search</button>
-        </form>
-        </div>
-    </section>
-    <main>
-      <section class="cards-outer-container">
-        <div class="card-inner-container-A">
-          <p id="jobTitle"></p>
-          <div class="innerCard">
-            <p id="Description"></p>
-          </div>
-        </div>
+      <section class="form-box">
+        <!-- Job Description -->
+        <input
+          type="text"
+          placeholder="Keywords"
+          name="Keywords"
+          class="search-field job-Description"
+          id="jobKey"
+        />
+        <input
+          type="text"
+          placeholder="Location"
+          value=""
+          name="Location"
+          class="search-field job-Location"
+          id="jobLocation"
+        />
+        <select name="PositionType" class="search-field job-Type" id="type">
+          <option value="" id="">Job Type</option>
+          <option value="Full Time" id="fullTime">Full Time</option>
+          <option value="Part Time">Part Time</option>
+          <option value="Contract">Contract</option>
+        </select>
+        <!-- Button to search for jobs -->
+        <button class="search-btn" onclick="goToJobSearch()">Search</button>
+        <!-- End of Form Items -->
       </section>
-      <section class="cards-outer-container">
-        <div class="card-inner-container-B">
-          <p id="jobTitle"></p>
-          <div class="innerCard">
-            <p id="Description"></p>
-          </div>
-        </div>
-      </section>
-      <section class="cards-outer-container">
-        <div class="card-inner-container-C">
-          <p id="jobTitle"></p>
-          <div class="innerCard">
-            <p id="Description"></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="cards-outer-container">
-        <div class="card-inner-container-D">
-          <p id="jobTitle"></p>
-          <div class="innerCard">
-            <p id="Description"></p>
-          </div>
-        </div>
+    </form>
+    <!-- ------------------------------------------------------------ -->
+    <main class="bigScreen show-mobile ">
+      <section id = 'grid-container' class="grid-container mobile">
+        <!-- <div class="job-Card">
+          <h2 id="jobTitle"></h2>
+          <p class="card-location"></p>
+          <p id="Description"></p>
+        </div> -->
       </section>
     </main>
 

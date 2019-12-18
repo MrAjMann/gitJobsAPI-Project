@@ -1,11 +1,15 @@
 function getJobs() {
   window.location.href = "/jobSearch.html";
 }
+function goToHome(){
+  window.location.href = "/index.html";
+}
+
 /*--------------------------------------------------*/
 
 function goToJobSearch() {
   const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "https://jobs.github.com/positions.json?page=1", true);
+  xhttp.open("GET", "https://jobs.github.com/positions.json?page=0&markdown=true", true);
   
   console.log("Request Open");
   xhttp.onload = function() {
@@ -21,12 +25,15 @@ function goToJobSearch() {
           foundJobs.forEach(job => {
             const grid = document.getElementById('grid-container')
             const div = document.createElement('div')
-            const title = document.createElement('h1')
+            const title = document.createElement('h2')
+            const desc = document.createElement('p')
             div.setAttribute('class', 'job-Card')
             
-            title.innerText = job.title
+            title.innerHTML = job.title
+            desc.innerHTML = job.description
             grid.appendChild(div)
             div.appendChild(title)
+            div.appendChild(desc)
           console.log(div)
           
         });

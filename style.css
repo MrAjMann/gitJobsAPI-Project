@@ -16,22 +16,62 @@ body {
 
 header {
   display: block;
+  align-content: center;
   text-align: center;
-  margin: 1em;
-  padding: 1em;
 }
 
 h1 {
-  padding: 10px;
-  font-size: 2.5em;
+  font-size: 6em;
+  font-weight: 800;
+  margin: 3em;
+  padding: 1em;
   color: #ff7f00;
+  text-align: center;
 }
+h2 {
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  margin: auto;
+  padding: 2em;
 
+}
 h4 {
-  font-size: 1.6em;
+  font-size: 2em;
   color: #ff7f00;
 }
+.hm-container {
+  display: block;
+  margin:auto;
+  padding: 1em;
+  width: 60%;
+}
+.hm-container p{
+  font-feature-settings: "smcp";
+  font-size: 2em;
+  justify-content: center;
+  text-align: center;
+}
+/* .hm-container .btn{
+  
+  text-align: center;
+} */
+.btn{
+  display: block;
+  margin:auto;
+  font-size: 1.5em;
+  height: 2em;
+  width: 10em;
+  text-align: center;
+  background-color:rgb(247, 127, 0);
+  border-radius: 25px;
+  transition:  width 3s, opacity 2s;
+}
 
+.btn:hover{
+ opacity: 0.8;
+  width: 14em;
+}
 form{
   text-align: center;
 }
@@ -50,7 +90,7 @@ form{
 }
 
 .job-Description {
-  width: 300px;
+  width: 200px;
 }
 
 .job-Location {
@@ -62,8 +102,9 @@ form{
 }
 
 .search-btn {
-  height: 3em;
-  width: 150px;
+  height: 4em;
+  width: 200px;
+  padding: 1em;
   background: #ff7f00;
   border: none;
   border-radius: 25px;
@@ -106,17 +147,34 @@ main .bigScreen {
   width: 100%;
   height: 30vh;
   border-radius: 15px;
- 
+  overflow: hidden;
 }
-.job-card:hover {
+.job-Card:hover {
   background: rgba(71, 71, 71, 0.8);
- 
 }
 
+.job-Card p{
+  text-align: center;
+
+  overflow: hidden;
+}
 /* Media Queries */
 @media (max-width: 800px) {
+  h1{
+    font-size: 3em;
+    margin: 2em;
+    padding: 0.5em;
+  }
+
+  .hm-container {
+  display: block;
+  margin:auto;
+  padding: 0.5em;
+  width: 60%;
+}
   .grid-container.mobile {
     display: grid;
     grid-template-columns: 1fr;
   }
+
 }
